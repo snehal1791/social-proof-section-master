@@ -10,3 +10,41 @@
 body {
     font-size: 15px;
 }
+body > * {
+    border: 5px solid lightblue;
+}
+body {
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-areas:
+        "header aside"
+        "main main"
+        "footer footer";
+    gap: 20px;
+}
+header {
+    grid-area: header;
+}
+aside > * {
+    border: 2px solid lightpink;
+}
+aside {
+    grid-area: aside;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
