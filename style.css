@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/specimen/Spartan:wght@400,500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap');
 :root { 
     --very-dark-magenta: hsl(300, 43%, 22%); 
     --soft-pink: hsl(333, 80%, 67%);
@@ -10,31 +10,83 @@
 body {
     font-size: 15px;
 }
-body > * {
+/* body > * {
     border: 5px solid lightblue;
-}
+} */
 body {
     background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
     background-position: top left, bottom right;
     background-repeat: no-repeat;
+    font-family: "Spartan";
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 0.25fr;
     grid-template-areas:
         "header aside"
         "main main"
         "footer footer";
-    gap: 20px;
+    gap: 30px;
+    padding: 5rem;
+    text-align: left;
 }
 header {
     grid-area: header;
+    color: var(--very-dark-magenta);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0 5rem;
 }
-aside > * {
-    border: 2px solid lightpink;
+header .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 auto;
+}
+header .header-text {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dak-grayish-magenta);
+
 }
 aside {
     grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+    font-weight: 700;
 }
+aside .rating {
+    max-width: 45rem;
+    align-self: center;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 5px 35px;
+    justify-content: center;
+}
+.rating:first-of-type {
+    justify-self: flex-start;
+}
+.rating:last-of-type {
+    justify-self: flex-end;
+}
+aside .rating-star {
+    padding: 0 0.15rem;
+}
+aside .rated {
+    font-size: 0.85rem;
+    color: var(--very-dark-magenta);
+    margin-left: 15px;
+    margin-right: 15px;
+    align-self: center;
+}
+
 main {
     grid-area: main;
 }
