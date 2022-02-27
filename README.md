@@ -55,6 +55,8 @@ With this challenge I learned and implemented
   ```css
   body {
         background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40% 50% 10%;
@@ -66,23 +68,87 @@ With this challenge I learned and implemented
         padding: 4rem;
         text-align: left;
     }
-    header {
+
+    .header-content {
         grid-area: header;
         display: flex;
         flex-direction: column;
         justify-content: left;
         padding: 0 5rem;
     }
-    header .header-text {
-      flex: 1;
+
+    .header-text {
+        flex: 1;
     }
-    aside {
-      grid-area: aside;
+
+    .aside-content {
+        grid-area: aside;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        place-items: center;
     }
-    main {
+
+    .rating {
+        max-width: 45rem;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        padding: 5px 35px;
+        justify-content: center;
+    }
+
+    .rating:first-of-type {
+        justify-self: flex-start;
+    }
+
+    .rating:last-of-type {
+        justify-self: flex-end;
+    }
+
+    .rated {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--very-dark-magenta);
+        margin-left: 15px;
+        margin-right: 15px;
+        align-self: center;
+    }
+
+    .main-reviews-content {
         grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+        place-items: center;
+        padding-left: 5rem;
     }
-    footer {
+
+    .review {
+        align-self: center;
+    }
+
+    .review:first-of-type {
+        align-self: flex-start;
+    }
+
+    .review:last-of-type {
+        align-self: flex-end;
+    }
+
+    .user-details {
+        display: flex;
+    }
+
+    .user-demograph {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .attribution {
         grid-area: footer;
     }
   ```

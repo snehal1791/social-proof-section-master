@@ -5,40 +5,45 @@
     --dak-grayish-magenta: hsl(303, 10%, 53%);
     --light-grayish-magenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
+    --link-color-blue: hsl(228, 45%, 44%);
 }
 
 body {
     font-size: 15px;
     font-family: "Spartan";
-    background-position: top left, bottom right;
-    background-repeat: no-repeat;
     text-align: center;
 }
-header {
+
+.header-content {
     color: var(--very-dark-magenta);
 }
-header .title {
+
+.title {
     font-weight: 700;
     line-height: 1;
 }
-header .header-text {
+
+.header-text {
     font-size: 1rem;
     font-weight: 500;
     color: var(--dak-grayish-magenta);
 }
-aside .rating {
+
+.rating {
     background-color: var(--light-grayish-magenta);
     border-radius: 0.5rem;
     text-align: center;
     padding: 0.5rem;
     margin-bottom: 1rem;
 }
-aside .rated {
+
+.rated {
     font-size: 0.85rem;
     font-weight: 800;
     color: var(--very-dark-magenta);
 }
-main {
+
+.main-reviews-content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -46,7 +51,7 @@ main {
     place-items: center;
 }
 
-main .review {
+.review {
     align-self: center;
     background-color: var(--very-dark-magenta);
     color: var(--light-grayish-magenta);
@@ -55,30 +60,35 @@ main .review {
     padding: 2rem;
     text-align: left;
 }
+
 .user-demograph > p {
     margin: 0;
 }
+
 .user-name {
     font-weight: 800;
 }
+
 .veification-status {
     color: var(--soft-pink);
 }
-footer {
-    margin-top: 10px;
-}
+
 .attribution {
+    margin-top: 10px;
     font-size: 11px;
     text-align: center;
 }
+
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--link-color-blue);
 }
 
 @media screen and (min-width: 1024px), screen and (min-width: 1440px) {
     
     body {
         background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40% 50% 10%;
@@ -90,21 +100,25 @@ footer {
         padding: 4rem;
         text-align: left;
     }
-    header {
+
+    .header-content {
         grid-area: header;
         display: flex;
         flex-direction: column;
         justify-content: left;
         padding: 0 5rem;
     }
-    header .title {
+
+    .title {
         font-size: 3rem;
         margin: 0 auto;
     }
-    header .header-text {
+
+    .header-text {
         flex: 1;
     }
-    aside {
+
+    .aside-content {
         grid-area: aside;
         display: grid;
         grid-template-columns: 1fr;
@@ -112,7 +126,8 @@ footer {
         gap: 10px;
         place-items: center;
     }
-    aside .rating {
+
+    .rating {
         max-width: 45rem;
         align-self: center;
         display: flex;
@@ -121,16 +136,20 @@ footer {
         padding: 5px 35px;
         justify-content: center;
     }
+
     .rating:first-of-type {
         justify-self: flex-start;
     }
+
     .rating:last-of-type {
         justify-self: flex-end;
     }
-    aside .rating-star {
+
+    .rating-star {
         padding: 0 0.15rem;
     }
-    aside .rated {
+
+    .rated {
         font-size: 0.85rem;
         font-weight: 800;
         color: var(--very-dark-magenta);
@@ -138,7 +157,8 @@ footer {
         margin-right: 15px;
         align-self: center;
     }
-    main {
+
+    .main-reviews-content {
         grid-area: main;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -147,50 +167,59 @@ footer {
         place-items: center;
         padding-left: 5rem;
     }
-    main .review {
+
+    .review {
         align-self: center;
     }
+
     .review:first-of-type {
         align-self: flex-start;
     }
+
     .review:last-of-type {
         align-self: flex-end;
     }
+
     .user-details {
         display: flex;
     }
+
     .user-details .user-profile-picture {
         margin-right: 15px;
         border-radius: 50%;
     }
+
     .user-demograph {
         align-self: center;
         justify-self: center;
     }
-    footer {
+
+    .attribution {
         grid-area: footer;
     }
 }
 
 @media only screen and (max-width: 376px) {
+
     body {
         background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         padding: 4rem 1rem;
         text-align: center;
-        border: 2px solid blue
     }
-    header {
+
+    .header-content {
         align-self: center;
     }
-    header h1 {
+
+    .title {
         font-size: 2rem;
         font-weight: 700;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
-    
 }
