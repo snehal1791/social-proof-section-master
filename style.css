@@ -64,6 +64,9 @@ main .review {
 .veification-status {
     color: var(--soft-pink);
 }
+footer {
+    margin-top: 10px;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
