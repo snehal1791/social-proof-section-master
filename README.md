@@ -28,7 +28,7 @@ Users should be able to:
 
 Desktop view of the application:
 
-![Deskstop](./images/desktopLive.png)
+![Deskstop](./images/desktopLive1.png)
 
 
 ### Links
