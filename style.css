@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;800;900&display=swap');
+
 :root { 
     --very-dark-magenta: hsl(300, 43%, 22%); 
     --soft-pink: hsl(333, 80%, 67%);
@@ -8,9 +9,20 @@
     --link-color-blue: hsl(228, 45%, 44%);
 }
 
+html,
 body {
-    font-size: 15px;
-    font-family: "Spartan";
+  padding: 0;
+  margin: 0;
+  font-family: "Spartan";
+  font-size: 15px;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
     text-align: center;
 }
 
@@ -86,12 +98,13 @@ body {
 @media screen and (min-width: 1024px), screen and (min-width: 1440px) {
     
     body {
+        height: 100%;
         background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
         background-position: top left, bottom right;
         background-repeat: no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 40% 50% 10%;
+        grid-template-rows: 4fr 5fr 1fr;
         grid-template-areas:
             "header aside"
             "main main"
@@ -99,6 +112,7 @@ body {
         gap: 30px;
         padding: 4rem;
         text-align: left;
+        margin: 0;
     }
 
     .header-content {
