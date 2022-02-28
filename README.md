@@ -159,7 +159,7 @@ I would continue to improve my current skills on CSS-Grid, Flexbox and combining
 
 ### Useful resources
 
-- [AlgoExper](https://www.algoexpert.io/frontend/css-crash-course/css-grid) - I am enrolled under FrontEnd course. They have a section for CSS-Grid for 20mins explaining with example very well. I really liked this short tutorial.
+- [AlgoExpert](https://www.algoexpert.io/frontend/css-crash-course/css-grid) - I am enrolled under FrontEnd course. They have a section for CSS-Grid for 20mins explaining with example very well. I really liked this short tutorial.
 - [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - This helped me for understanding CSS Grid.
 
 
